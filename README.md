@@ -1,121 +1,71 @@
-# CS3450Group3: Dan's Car Rental
-## Group Members
-Jaxson Madison
+# Dan's Car Rental - Group 3 Project (CS3450)
 
-Jayden Lintz
+## Project Overview
+Dan's Car Rental is a web application developed as part of the CS3450 course by Group 3. This project was a collaborative effort that taught us valuable skills in agile methodologies and teamwork. Our main objective was to create a seamless car rental service that allows users to rent cars through a user-friendly web interface while managing data through a robust backend system.
 
-Ethan Christensen
+### Technical Stack
+- **Frontend:** Vue.js - A progressive JavaScript framework used for building user interfaces.
+- **Backend:** Node.js with Express - A JavaScript runtime built on Chrome's V8 JavaScript engine, used for the server-side logic.
+- **Database:** SQLite - A C-language library that implements a small, fast, self-contained, high-reliability, full-featured SQL database engine.
+- **Version Control:** Git - Used for tracking changes in the source code during development.
+- **Project Management:** Jira - Agile project management tool that supports any agile methodology.
+- **Testing:** Cypress and Mocha - Used for writing browser-based and unit tests to ensure quality and functionality.
 
-Benson Riley
+## Key Learnings
+- **Agile Development:** Implemented Scrum, enhancing our ability to respond to unpredictability through iterative work cadences.
+- **Team Collaboration:** Gained experience in collaborative problem-solving and feature integration through pull requests and code reviews.
+- **Full-Stack Development:** Developed skills in both frontend and backend development, understanding how to create dynamic, database-driven web applications.
 
-## Organization
-This project is split into Frontend and Backend applications.
+## Project Organization
+This project is divided into two main parts:
+- **Frontend Application:** The interface for user interaction.
+- **Backend Application:** Manages business logic and database interactions, and provides an API for data access and manipulation.
 
-The Frontend Application will be what our users will interact with.
+### Branching Strategy
+- `main` branch: Stable and deployable state of the application.
+- `develop` branch: Integration branch for features and fixes.
+- Feature branches: Based on `develop`, prefixed with `DCR-{ticket #}_Ticket_Description`.
 
-The Backend Application will keep all business logic in sqlite databases.
-It will expose an API for accessing and modifying the database to privileged users.
+## Setup and Running Instructions
 
-#### Name Scheme
-Branches: `DCR-{ticket #}_Ticket_Description`
+### Initial Setup
+1. Ensure Node.js and npm are installed.
+2. Clone the repository and navigate into the project directory.
+3. Install dependencies:
+   ```sh
+   cd "App Frontend"
+   npm install
+   cd ../App Backend
+   npm install
+   npm run db:migrate
+   npm run db:seed
+   ```
 
-Diagrams: `UseCaseName.png`
+### Running the Applications
+1. Open two command shells in the project root.
+2. In the first shell, start the frontend:
+   ```sh
+   cd "App Frontend"
+   npm run dev
+   ```
+3. In the second shell, start the backend:
+   ```sh
+   cd "App Backend"
+   npm run dev
+   ```
 
-Program files will use camelCase
+### Accessing the Applications
+- Frontend: <http://localhost:5713>
+- Backend: <http://localhost:3000>
 
+## Testing
+Refer to the `package.json` files in each project directory for available testing scripts. Integration tests are done using Cypress.
 
-## Version-Control Procedures
+## Documentation
+- **Scrum Documents:** Located in `docs/scrumMilestone3/`.
+- **Project Presentation:** Available in `docs/presentation` or [Google Slides](https://docs.google.com/presentation/d/1BtV3ePxTkxE1OrxPIj8Qrl9AGrBDBaMe4zalUUzhhPM/edit#slide=id.g2189308b72f_0_123).
 
-The `main` branch will always be tested and deployable
-
-The `develop` branch will be the base for new features and fixes
-
-Branches for specific features will be based from `dev`.
-
-## Tool stack description and setup procedure
-
-`git` - Code storage and collaboration software
-
-`Jira` - Scrum and task management software
-
-`Node.js` - Backend JS runtime
-
-`sqlite3` - Database software
-
-`Vue` - Frontend UI
-
-`Cypress` + `Mocha` - Testing Framework
-
-## Build Instructions
-
-### First time
-1. Make sure you have Node and npm installed.
-
-2. Clone the repository to your machine, and open a command shell in the root directory of the project.
-
-3. To install all of the dependencies, run the following commands:
-```sh
-# Navigate to App Frontend
-cd "App Frontend"
-npm install
-cd ..
-
-# Navigate to App Backend
-cd "App Backend"
-npm install
-npm run db:migrate
-npm run db:seed
-cd ..
-```
-
-*Note:* When dependencies of this project change, `npm install` needs to be run again in each app directory.
-
-### Starting the Apps
-
-1. If you haven't already, complete the first-time instructions in the previous section
-2. Open two command shells from the root directory of the project.
-3. In the first shell, run these commands:
-```sh
-cd "App Frontend"
-npm run dev
-```
-4. In the other shell, run these commands:
-```sh
-cd "App Backend"
-npm run dev
-```
-5. If there are changes to the database, run:
-```sh
-cd "App Backend"
-npm run db:migrate
-```
-
-The frontend can be accessed at http://localhost:5713
-The backend can be accessed at http://localhost:3000 
-## Testing instructions
-**TODO** We will use Cypress for testing. Look in package.json files to see what different scripts
-have already been generated.
-
-## Scrum documents
-
-They can be found in docs/scrumMilestone3/
-
-## Presentation
-
-can be found at: 
-/docs/presentation
-or 
-https://docs.google.com/presentation/d/1BtV3ePxTkxE1OrxPIj8Qrl9AGrBDBaMe4zalUUzhhPM/edit#slide=id.g2189308b72f\_0\_123
-
-## Login
-user: 
-WatsonMan 
-12345678SUM
-
-employee:
-1WatsonMan
-112345678SUM
-
-manager:
-2WatsonMan
-212345678SUM
+## User Credentials
+- **Customer:** `WatsonMan`, `12345678SUM`
+- **Employee:** `1WatsonMan`, `112345678SUM`
+- **Manager:** `2WatsonMan`, `212345678SUM`
